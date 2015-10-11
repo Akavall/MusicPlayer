@@ -4,7 +4,7 @@ A simple tool that allows you to play music from a given file
 For more convenent usage add this line to `.bashrc` file.
 
 ```
-alias music_player='python ~/MusicPlayer/play_list.py
+alias music_player='python ~/MusicPlayer/play_list.py'
 ```
 
 Then from your music library directory call:
