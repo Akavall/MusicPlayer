@@ -1,6 +1,7 @@
 import eyed3
 import logging  
 import os
+import random as rn 
 import sys 
 
 from utilities import play_wav, play_mp3
@@ -19,6 +20,8 @@ def get_this_artist_files(current_dir, artist_name):
 
 
 artist_files = get_this_artist_files(sys.argv[1], sys.argv[2])
+
+rn.shuffle(artist_files)
 
 logging.info("Fount {} files by artist {}".format(len(artist_files), sys.argv[2]))
 logging.info("Will play: {}".format(artist_files))

@@ -23,10 +23,10 @@ def play_wav(file_name):
     logging.info("Now playing: {}".format(file_name))
     duration = get_wav_duration(file_name)
     os.system("gnome-open \"{}\"".format(file_name))
-    time.sleep(duration + 1)
+    time.sleep(duration)
     
 def play_mp3(file_name):
     logging.info("Now playing: {}".format(file_name))
     duration = get_mp3_duration(file_name)
     os.system("gnome-open \"{}\"".format(file_name))
-    time.sleep(duration + 1)
+    time.sleep(duration)
