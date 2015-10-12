@@ -1,34 +1,11 @@
-import wave
-import contextlib
-import os
-import time
 import sys
-import logging
-import eyed3
 
-logging.getLogger().setLevel(logging.INFO)
-
-def get_wav_duration(file_name):
-    with contextlib.closing(wave.open(file_name,'r')) as f:
-        frames = f.getnframes()
-        rate = f.getframerate()
-        duration = frames / float(rate)
-        return duration
-
-def get_mp3_duration(file_name):
-    return eyed3.load(file_name).info.time_secs
+from utilities import play_wav, play_mp3    
 
 print "Will play: {}".format(sys.argv[1:])
 
 for file_name in sys.argv[1:]:
     if file_name[-3:] == "wav":
-        logging.info("Now playing: {}".format(file_name))
-        duration = get_wav_duration(file_name)
-        os.system("gnome-open \"{}\"".format(file_name))
-        time.sleep(duration + 1)
+        play_wav(file_name)
     elif file_name[-3:] == "mp3":
-        logging.info("Now playing: {}".format(file_name))
-        duration = get_mp3_duration(file_name)
-        os.system("gnome-open \"{}\"".format(file_name))
-        time.sleep(duration + 1)
-        
+        play_mp3(file_name)
