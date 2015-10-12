@@ -12,3 +12,16 @@ Then from your music library directory call:
 ```
 play_list "my_song_1.mp3" "my_song_2.wav"
 ```
+
+To play songs of one artist:
+
+
+Add this line to you `.bashrc` file:
+```
+alias play_artist='python ~/MusicPlayer/play_artist.py'
+```
+
+Then from your music library directory call:
+```
+play_artist "~/MyMusicLibrary" "my_favorite_artist"
+``` 
