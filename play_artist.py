@@ -7,9 +7,9 @@ from utilities import play_wav, play_mp3
 
 logging.getLogger().setLevel(logging.INFO)
 
-def get_this_artists_files(current_dir, artist_name):
+def get_this_artist_files(current_dir, artist_name):
     all_files = os.listdir(current_dir)
-    artists_files = []
+    artist_files = []
     for f in all_files:
         if f[-3:] == "mp3":
             # This only works for mp3 files 
@@ -18,7 +18,7 @@ def get_this_artists_files(current_dir, artist_name):
     return artist_files
 
 
-artist_files = get_this_artists_files(sys.argv[1], sys.argv[2])
+artist_files = get_this_artist_files(sys.argv[1], sys.argv[2])
 
 logging.info("Fount {} files by artist {}".format(len(artist_files), sys.argv[2]))
 logging.info("Will play: {}".format(artist_files))
