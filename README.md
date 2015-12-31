@@ -26,10 +26,12 @@ Then from your music library directory call:
 play_artist "~/MyMusicLibrary" "my_favorite_artist"
 ``` 
 
-*Create a Custom play list*
+**Create a Custom play list**
 
 create a play_list file:
-my_play_list.txt
+
+```my_play_list.txt```
+
 ```
 my_song_1.wav
 my_song_2.wav
