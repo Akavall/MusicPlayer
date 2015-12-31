@@ -30,7 +30,9 @@ play_artist "~/MyMusicLibrary" "my_favorite_artist"
 
 create a play_list file:
 
-```my_play_list.txt```
+```
+my_play_list.txt
+```
 
 ```
 my_song_1.wav
