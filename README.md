@@ -28,17 +28,16 @@ play_artist "~/MyMusicLibrary" "my_favorite_artist"
 
 **Create a Custom play list**
 
-create a play_list file:
+create a play_list file: `my_play_list.txt`
 
-```
-my_play_list.txt
-```
 
 ```
 my_song_1.wav
 my_song_2.wav
 my_song_n.wav
 ```
+
+Note: File titles cannot have spaces in them; no `my song 1.wav`.
 
 call it:
 ```
