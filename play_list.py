@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import sys
 
 from utilities import play_wav, play_mp3    
